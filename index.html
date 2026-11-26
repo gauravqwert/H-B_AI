@@ -1,23 +1,20 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="https://vdk-viber-runtime-prod.bot.botpress.host/edge/webchat.css" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="https://vdk-viber-runtime-prod.bot.botpress.host/edge/webchat.css" />
 
 </head>
-
 <body>
 <script src="https://vdk-viber-runtime-prod.bot.botpress.host/edge/webchat.js"></script>
 <script>
   fetch("https://vdk-viber-runtime-prod.bot.botpress.host/edge/bots/93731809-85af-4af6-88fe-be51b21da630/config")
     .then((res) => res.json())
     .then(({ webchat }) =>
-      VdkEdgeWebchat.mount({ ...webchat, mode: "bubble", baseUrl: "https://vdk-viber-runtime-prod.bot.botpress.host", botId: "93731809-85af-4af6-88fe-be51b21da630" })
+      VdkEdgeWebchat.mount({ ...webchat, mode: "standalone", baseUrl: "https://vdk-viber-runtime-prod.bot.botpress.host", botId: "93731809-85af-4af6-88fe-be51b21da630" })
     )
 </script>
 </body>
-
 </html>
